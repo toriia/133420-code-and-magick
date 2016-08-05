@@ -1,7 +1,7 @@
 # Личный проект «Код и Магия» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Виктория Береговая](https://up.htmlacademy.ru/javascript/6/user/133420).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Коростелева]
 
 ---
 
