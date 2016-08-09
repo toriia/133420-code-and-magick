@@ -6,17 +6,19 @@ function getMessage(a, b) {
         } else {
             return 'Я никуда не попал';
         }
-
-        function getArrayMultiplicatingSum(array){
+}
+        function getArray1MultiplicatingSum(array){
           var distancePath = 0;
           for (var i = 0; i < array.length; i++) {
               distancePath += a[i] * b[i];
           }
-
-          function getArrayMultiplicatingSum(array){
+}
+          function getArray2MultiplicatingSum(array){
             var numberOfSteps = 0;
             for (var i = 0; i < array.length; i++) {
                 numberOfSteps += a[i];
+              }
+}
 
     } else if (typeof a === 'number') {
         return 'Я прыгнул на  ' + a + ' * 100 сантиметров';
