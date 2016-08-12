@@ -19,9 +19,7 @@ function getMessage(a, b) {
       for(var i = 0; i < array.length; i++){
       sum += array[i];
       }
-      console.log(sum);
-      }
-      getArraySum(arr);
+      return(sum);
        };
 
 
@@ -30,7 +28,5 @@ function getMessage(a, b) {
       for (var i = 0; i < array.length; i++)
       sum += a[i] * b[i];
       }
-      console.log(sum);
-      }
-      getArrayMultiplicatingSum(arr);
+      return(sum);
       };
