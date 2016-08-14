@@ -2,24 +2,22 @@
 
 function getMessage(a, b) {
   if (typeof a === 'boolean') {
+    if (a === true) {
+      return 'Я попал в ' + b + '';
+    } else {
+      return 'Я никуда не попал';
+    }
 
-  if (a === true) {
-   return 'Я попал в ' + b + '';
- }
+  } else if (typeof a === 'number') {
+    return 'Я прыгнул на  ' + a + ' * 100 сантиметров';
 
- } else {
-   return 'Я никуда не попал';
+  } else if (Array.isArray(a) && Array.isArray(b)) {
+    return 'Я прошёл ' + getArrayMultiplicatingSum(a, b) + ' метров';
 
- } if (typeof a === 'number') {
-   return 'Я прыгнул на  ' + a + ' * 100 сантиметров';
-
- } else if (Array.isArray(a) && Array.isArray(b)) {
-   return 'Я прошёл ' + getArrayMultiplicatingSum(a, b) + ' метров';
-
- } else if (Array.isArray(a)) {
-   return 'Я прошёл ' + getArraySum(a) + ' метров';
- }
+  } else if (Array.isArray(a)) {
+    return 'Я прошёл ' + getArraySum(a) + ' метров';
   }
+}
 
 
 
