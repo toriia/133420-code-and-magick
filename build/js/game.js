@@ -391,22 +391,48 @@ window.Game = (function() {
       }
     },
 
+    _drawMessage: function(a, b) {
+      var canvas = document.querySelector('canvas');
+      if (canvas.getContext) {
+        var this.ctx = canvas.getContext('2d');
+
+        this.ctx.beginPath();
+        this.ctx.lineTo(40, 20);
+        this.ctx.lineTo(300, 20);
+        this.ctx.lineTo(300, 80);
+        this.ctx.lineTo(30, 100);
+        this.ctx.closePath();
+        this.ctx.stroke();
+        this.ctx.fillStyle = '#FFFFFF';
+        this.ctx.shadowColor = "rgba(0, 0, 0, 0.7)";
+        this.ctx.shadowOffsetX = 10;
+        this.ctx.shadowOffsetY = 10;
+        this.ctx.font = '16px PT Mono';
+        this.ctx.textBaseline = 'hanging';
+        this.ctx.fillText( a, 55, 30);
+        this.ctx.fillText( b, 55, 50);
+            }
+        },
     /**
      * Отрисовка экрана паузы.
      */
     _drawPauseScreen: function() {
       switch (this.state.currentStatus) {
         case Verdict.WIN:
-          console.log('you have won!');
+        drawMessage('Поздравляем! Вы выиграли!', '');
+          //console.log('you have won!');
           break;
         case Verdict.FAIL:
-          console.log('you have failed!');
+        drawMessage('Очень жаль! Неудача!', '');
+          //console.log('you have failed!');
           break;
         case Verdict.PAUSE:
-          console.log('game is on pause!');
+        drawMessage('Игра на паузе', '');
+          //console.log('game is on pause!');
           break;
         case Verdict.INTRO:
-          console.log('welcome to the game! Press Space to start');
+        drawMessage('Добро пожаловать в игру!', 'Нажмите пробел, чтобы начать');
+          //console.log('welcome to the game! Press Space to start');
           break;
       }
     },
