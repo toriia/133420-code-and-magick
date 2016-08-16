@@ -413,6 +413,7 @@ window.Game = (function() {
         this.ctx.fillText( b, 55, 50);
             }
         },
+		
     /**
      * Отрисовка экрана паузы.
      */
