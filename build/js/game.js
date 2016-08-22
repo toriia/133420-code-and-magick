@@ -397,13 +397,13 @@ window.Game = (function() {
         this.ctx = canvas.getContext('2d');
 
         this.ctx.beginPath();
-        this.ctx.lineTo(60, 20);
-        this.ctx.lineTo(310, 20);
-        this.ctx.lineTo(310, 80);
-        this.ctx.lineTo(30, 100);
-        //this.ctx.closePath();
-        this.ctx.stroke();
         this.ctx.fillStyle = '#FFFFFF';
+        this.ctx.lineTo(60, 20);
+        this.ctx.lineTo(340, 20);
+        this.ctx.lineTo(340, 80);
+        this.ctx.lineTo(30, 100);
+        this.ctx.closePath();
+        this.ctx.fill();
         this.ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
         this.ctx.shadowOffsetX = 10;
         this.ctx.shadowOffsetY = 10;
